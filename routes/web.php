@@ -6,6 +6,16 @@ Route::get('/', function () {
 
     $nome = "Heitor"; 
     $idade = 20;
+    
+    $arr = [1, 2, 3, 4, 5];
 
-    return view('welcome', ['nome' => $nome], ['idade' => $idade]);
+    $nomes = ["Matheus", "Maria", "João", "Saulo"];
+
+    return view('welcome', 
+    [
+        'nome' => $nome, 
+        'idade' => $idade,
+        'arr' => $arr,
+        'nomes' => $nomes
+    ]);
 });
