@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -21,5 +22,12 @@ Route::get('/', function () {
 });
 
 Route::get('/produtos', function () {
-    return view('products');
+    
+    $busca = request('search');  
+    
+    return view('products', ['busca' => $busca]);
+});
+
+Route::get('/produtos_teste/{id?}', function ($id = null) {
+    return view('product', ['id' => $id]);
 });
