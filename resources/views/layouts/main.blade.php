@@ -40,8 +40,11 @@
                 </div>
             </nav>
         </header>
+        
+        <main class="flex-grow-1">
+            @yield('content')
+        </main>
     <footer>
-        @yield('content') 
         <p>HDC Events &copy; 2025</p>
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
