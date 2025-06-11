@@ -80,4 +80,14 @@ class EventController extends Controller
 
     }
 
+    public function dashboard() {
+
+        $user = Auth::user();
+
+        $events = $user->events;
+
+        return view('events.dashboard', ['events' => $events]);
+
+    }
+
 }
