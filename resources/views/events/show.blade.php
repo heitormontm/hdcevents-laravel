@@ -17,6 +17,7 @@
                     {{ count($event->users) === 1 ? 'Participante' : 'Participantes' }}
                 </p>
                 <p class="event-owner"><ion-icon name="star-outline"></ion-icon> {{ $eventOwner['name'] }}</p>
+                @if(!$hasUserJoined)
                 <form action="/events/join/{{ $event->id }}" method="POST">
                     @csrf
                     <a href="/events/join/{{ $event->id }}" 
@@ -27,6 +28,9 @@
                         Confirmar Presença
                     </a>
                 </form>
+                @else
+                <p class="already-joined-msg">Você já está participando deste evento!</p>
+                @endif
                 <h3>O evento conta com:</h3>
                 <ul id="items-list">
                 @foreach($event->items as $item)
