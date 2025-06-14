@@ -19,10 +19,4 @@ Aplicação web para gerenciamento de eventos construída com o framework Larave
 - **Banco de Dados**: MySQL  
 - **Autenticação**: Laravel Jetstream
 
-### 📦 Instalação
 
-1. Clone o repositório:
-
-   ```bash
-   git clone https://github.com/heitormontm/hdcevents-laravel.git
-   cd hdcevents-laravel
